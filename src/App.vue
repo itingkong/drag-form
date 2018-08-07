@@ -1,31 +1,40 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+	<div id="app">
+		<div class="common main">
+			<Sidebar></Sidebar>
+			<new-form></new-form>
+			<Editor></Editor>
+		</div>
+	</div>
 </template>
 
-<style>
+<script>
+import Sidebar from 'components/sidebar/sidebar'
+import newForm from 'components/newForm/newForm'
+import Editor from 'components/editor/editor'
+
+export default {
+		name: 'App',
+		components: { 
+			Sidebar,
+			newForm,
+			Editor
+		}
+}
+</script>
+
+<style lang="scss" scoped>
+@import 'assets/common.scss';
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+	width: 100%;
+	height: 100%;
+	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	.main {
+		padding: 20px;
+		@include flex-sb-fs;
+			
+	}
 }
 </style>
