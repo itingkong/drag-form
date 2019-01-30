@@ -1,6 +1,8 @@
 {
   "name": "drag-form",
   "version": "0.1.0",
+  "main": "dist/vue.runtime.common.js",
+  "module": "dist/vue.runtime.esm.js",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

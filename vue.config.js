@@ -9,6 +9,6 @@ module.exports = {
 			.set('@', resolve('src'))
 			.set('assets',resolve('src/assets'))
 			.set('components',resolve('src/components'))
-			.set('vue',resolve('vue/dist/vue.js'))
+			// .set('vue',resolve('vue/dist/vue.js'))
 	}
 }
